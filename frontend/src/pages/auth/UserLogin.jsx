@@ -1,9 +1,12 @@
+// UserLogin component - User authentication page
+// Handles email and password validation for regular users
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Mail, Lock, Eye, EyeOff, Mountain, ArrowLeft, User, Sparkles } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../../context/AuthContext';
 
+// Login form component for users
 export default function UserLogin() {
   const navigate = useNavigate();
   const { login } = useAuth();
