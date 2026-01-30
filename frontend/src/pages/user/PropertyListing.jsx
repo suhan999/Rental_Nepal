@@ -1,3 +1,5 @@
+// PropertyListing component - Displays all available properties with search and filter options
+// Users can browse, search, and filter properties by various criteria
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { 
@@ -6,6 +8,7 @@ import {
   ArrowLeft, SlidersHorizontal, User
 } from 'lucide-react';
 
+// Component for displaying property listings with advanced search and filtering
 const PropertyListing = () => {
   const navigate = useNavigate();
   const [properties, setProperties] = useState([]);
