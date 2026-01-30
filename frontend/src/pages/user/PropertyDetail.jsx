@@ -1,7 +1,10 @@
+// PropertyDetail component - Shows detailed information about a specific property
+// Includes images, amenities, pricing, and booking options
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Home, Bed, Bath, Square, MapPin, Heart, ArrowLeft, Star, User, Mountain, Calendar, Check, Phone, Mail, Building2, ChevronLeft, ChevronRight, Share2, Shield } from 'lucide-react';
 
+// Component for displaying detailed property information
 const PropertyDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -12,6 +15,7 @@ const PropertyDetail = () => {
   const [mainImg, setMainImg] = useState(0);
   const [isFavorite, setIsFavorite] = useState(false);
 
+  // Fetch property details from API
   const fetchProperty = async () => {
     try {
       setLoading(true);
