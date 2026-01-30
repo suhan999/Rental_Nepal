@@ -1,7 +1,10 @@
+// Authentication context for managing user state across the application
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext();
 
+// Hook to access authentication context
+// Throws error if used outside AuthProvider
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
@@ -10,6 +13,8 @@ export const useAuth = () => {
   return context;
 };
 
+// AuthProvider component - Manages user authentication state
+// Persists user data in localStorage
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
     try {
