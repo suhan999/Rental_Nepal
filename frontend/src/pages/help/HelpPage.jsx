@@ -1,11 +1,15 @@
+// HelpPage component - FAQ and support information
+// Provides users with common questions and troubleshooting guidance
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mountain, ArrowLeft, Search, ChevronDown, ChevronUp, HelpCircle, User, Home, CreditCard, Shield, MessageSquare, Settings } from 'lucide-react';
 
+// Help and FAQ page component
 export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [openFaq, setOpenFaq] = useState(null);
 
+  // Help categories for organization
   const categories = [
     { icon: User, title: 'Account', description: 'Registration, login, profile' },
     { icon: Home, title: 'Rentals', description: 'Browsing, booking, listings' },
