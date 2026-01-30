@@ -1,9 +1,12 @@
+// RentalHouses component - Browse and filter available rental properties
+// Displays all rental listings with advanced filtering and search capabilities
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Home, Heart, Search, Filter, MapPin, Bed, Bath, Car, Star, ShoppingCart, Eye, Mountain, LogOut, User, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
+// Main rental houses browsing component
 const RentalHouses = () => {
   const { user, token } = useAuth();
   const navigate = useNavigate();
