@@ -1,3 +1,4 @@
+// Main App component - Handles all routing for the application
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import SignUp from './pages/auth/SignUp';
