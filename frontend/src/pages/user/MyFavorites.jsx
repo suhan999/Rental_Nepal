@@ -1,3 +1,5 @@
+// MyFavorites component - Displays user's favorite properties
+// Allows users to view, manage, and organize their saved properties
 import React, { useState, useEffect } from 'react';
 import { 
   Home, MapPin, Bed, Bath, Square, Star, Heart, Search, Filter,
@@ -5,6 +7,7 @@ import {
 } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 
+// Component for managing user's favorite properties
 const MyFavorites = () => {
   const [favorites, setFavorites] = useState(new Set());
   const [properties, setProperties] = useState([]);
