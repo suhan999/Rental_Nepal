@@ -1,10 +1,14 @@
+// LoginPage component - Role-based login selection page
+// Allows users to choose login type: User, Seller, or Admin
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, Building2, Shield, Mountain, ArrowRight, Sparkles } from 'lucide-react';
 
+// Login page that presents different login options based on user role
 export default function LoginPage() {
   const navigate = useNavigate();
 
+  // Configuration for different login options
   const loginOptions = [
     {
       title: "User Login",
