@@ -1,9 +1,12 @@
+// LogoutHandler component - Manages user logout flow
+// Clears authentication data and redirects to home page
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const LogoutHandler = () => {
   const navigate = useNavigate();
 
+  // Effect hook - handles logout on component mount
   useEffect(() => {
     // Clear the token from localStorage
     localStorage.removeItem('token');
@@ -13,6 +16,7 @@ const LogoutHandler = () => {
     navigate('/', { replace: true });
   }, [navigate]);
 
+  // Show loading UI while logout process completes
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-100 via-white to-sky-50">
       <div className="text-center">
