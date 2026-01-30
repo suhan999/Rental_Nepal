@@ -1,3 +1,5 @@
+// SellerDashboard component - Main dashboard for sellers
+// Provides navigation and overview of seller functions (properties, transactions, etc.)
 import React, { useState } from 'react';
 import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
 import { Home, Building2, Receipt, Settings, LogOut, Plus, Bell, X, ShoppingCart, Menu, Mountain, ChevronDown } from 'lucide-react';
@@ -8,6 +10,7 @@ import SellerSettings from './SellerSettings';
 import PurchaseRequests from './PurchaseRequests';
 import LogoutHandler from '../../components/LogoutHandler';
 
+// Navigation links for seller dashboard
 const navLinks = [
   { to: '/seller/dashboard', label: 'Dashboard', icon: Home },
   { to: '/seller/properties', label: 'My Listings', icon: Building2 },
