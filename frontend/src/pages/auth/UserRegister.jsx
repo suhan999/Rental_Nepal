@@ -1,8 +1,11 @@
+// UserRegister component - User registration page
+// Handles new user account creation with validation
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, Mail, Lock, Phone, Eye, EyeOff, MapPin, Mountain, ArrowLeft, UserPlus } from 'lucide-react';
 
+// Registration form component for new users
 export default function UserRegister() {
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors }, watch } = useForm();
@@ -12,6 +15,7 @@ export default function UserRegister() {
   const [isLoading, setIsLoading] = useState(false);
   const [messageType, setMessageType] = useState("");
 
+  // Handle form submission for user registration
   const onSubmit = async (data) => {
     setSuccessMessage("");
     setIsLoading(true);
