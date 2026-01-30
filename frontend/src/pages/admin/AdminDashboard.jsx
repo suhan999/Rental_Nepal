@@ -1,3 +1,5 @@
+// AdminDashboard component - Main admin dashboard for site administration
+// Provides access to user management, property moderation, and analytics
 import React, { useState } from 'react';
 import { NavLink, Routes, Route, useNavigate } from 'react-router-dom';
 import { Home, Building2, Users, Receipt, User, LogOut, Mountain, Menu, X, Bell, ChevronDown } from 'lucide-react';
@@ -8,6 +10,7 @@ import AdminUsers from './AdminUsers';
 import AdminTransactions from './AdminTransactions';
 import AdminProfile from './AdminProfile';
 
+// Navigation links for admin dashboard
 const navLinks = [
   { to: '/admin/dashboard', label: 'Dashboard', icon: Home },
   { to: '/admin/properties', label: 'Listings', icon: Building2 },
