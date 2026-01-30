@@ -1,7 +1,10 @@
+// OrderHistory component - Displays user's booking and purchase history
+// Shows status, details, and actions for each booking
 import React, { useEffect, useState } from 'react';
 import { Home, Calendar, MapPin, Bed, Bath, Square, Eye, Mountain, User, LogOut, ChevronDown, ArrowLeft, Clock, CheckCircle, XCircle, AlertCircle } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 
+// Configuration for different booking statuses
 const statusConfig = {
   pending: { 
     bg: 'bg-amber-50', 
