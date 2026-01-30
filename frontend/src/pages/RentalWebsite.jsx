@@ -1,3 +1,5 @@
+// RentalWebsite component - Main landing page with property listings and filters
+// Displays featured properties, testimonials, and navigation
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,6 +9,7 @@ import {
   Facebook, Instagram, Linkedin, Twitter, Play, Eye, ChevronLeft, ChevronRight, Building2, Mountain, Compass
 } from 'lucide-react';
 
+// Main rental website component
 const RentalWebsite = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
