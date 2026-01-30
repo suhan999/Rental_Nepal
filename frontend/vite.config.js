@@ -1,9 +1,11 @@
+// Vite configuration for Rental Nepal frontend
+// Configures React, Tailwind CSS, and development server settings
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 
-// https://vite.dev/config/
+// Vite configuration with React and Tailwind CSS plugins
 export default defineConfig({
   server: {
     proxy: {
