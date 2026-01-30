@@ -1,3 +1,5 @@
+// ProtectedRoute component - Protects routes that require authentication
+// Validates user roles and redirects to login if not authenticated
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -5,6 +7,7 @@ import { useAuth } from '../context/AuthContext';
 const ProtectedRoute = ({ children, requiredRole, requiredRoles }) => {
   const { user, isAuthenticated, loading } = useAuth();
 
+  // Show loading spinner while authentication state is being determined
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
