@@ -1,8 +1,12 @@
+// AboutPage component - Information about Rental Nepal platform
+// Displays company mission, values, statistics, and team information
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mountain, Users, Home, Award, Target, Heart, ArrowLeft, CheckCircle, Globe, Shield } from 'lucide-react';
 
+// About page component with company info and mission
 export default function AboutPage() {
+  // Platform statistics
   const stats = [
     { number: '5000+', label: 'Happy Customers' },
     { number: '1200+', label: 'Items Listed' },
@@ -10,6 +14,7 @@ export default function AboutPage() {
     { number: '98%', label: 'Satisfaction Rate' }
   ];
 
+  // Company values and principles
   const values = [
     { icon: Heart, title: 'Customer First', description: 'We prioritize your needs and work tirelessly to exceed expectations.' },
     { icon: Shield, title: 'Trust & Security', description: 'Your safety and peace of mind are our top priorities.' },
