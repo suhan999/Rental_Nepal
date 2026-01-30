@@ -1,16 +1,21 @@
+// ContactPage component - Contact form and support information
+// Allows users to get in touch with the Rental Nepal team
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mountain, ArrowLeft, Mail, Phone, MapPin, Clock, Send, MessageSquare, User } from 'lucide-react';
 
+// Contact page component with form and contact details
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Handle form input changes
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  // Submit contact form
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
